@@ -1,0 +1,12 @@
+project: savantenvs/ccan
+target: utf8
+duration: 1200
+
+cmds:
+  - cmd: /mayhem/mayhem/build/bin/fuzz_utf8
+    libfuzzer: true
+    timeout: 5
+
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/utf8/testsuite

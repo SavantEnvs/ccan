@@ -1,0 +1,1 @@
+query Q($a: Int = 1) { user(id: "x", n: 1.5e3) { ...F name @skip(if: true) } } fragment F on User { id }
